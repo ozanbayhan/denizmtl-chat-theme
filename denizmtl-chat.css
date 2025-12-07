@@ -1,216 +1,55 @@
-/* ================================================
-   DENİZ METAL & INSIZE – PROFESYONEL CHAT TEMA
-   ================================================ */
-
 :root {
-  /* --- Renk Paleti --- */
-  /* Deniz Metal Mavisi (Ana Renk) */
-  --chat--color--primary: #004b7b;
-  --chat--color--primary-dark: #002e4d;
-  
-  /* INSIZE Yeşili (Aksiyon/Vurgu Rengi) */
-  --chat--color--secondary: #009a4a;
-  --chat--color--secondary-hover: #007844;
+  /* Genel font ve boyutlar */
+  --chat--font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --chat--window--width: 420px;
+  --chat--window--height: 640px;
+  --chat--window--border-radius: 18px;
+  --chat--border-radius: 14px;
+  --chat--messages-list--padding: 1.25rem;
 
-  /* Nötr Tonlar (Endüstriyel Gri) */
-  --chat--color-bg-light: #f8fafc;
-  --chat--color-bg-white: #ffffff;
-  --chat--color-text-dark: #1e293b;
-  --chat--color-text-medium: #64748b;
-  --chat--color-border: #e2e8f0;
+  /* Renk paleti – INSIZE / Deniz Metal havası */
+  --chat--color--primary: #00b894;
+  --chat--color--primary-shade-50: #00a383;
+  --chat--color--primary--shade-100: #008c70;
 
-  /* --- Boyutlar ve Fontlar --- */
-  --chat--font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --chat--window--border-radius: 16px;
-  --chat--window--shadow: 0 10px 40px rgba(0, 75, 123, 0.15);
-}
+  --chat--color--secondary: #0984e3;
+  --chat--color-secondary-shade-50: #076bb7;
 
-/* ======================================================
-   1. PENCERE & GENEL YAPI
-   ====================================================== */
+  /* Header */
+  --chat--header--background: linear-gradient(135deg, #020b24, #041743);
+  --chat--header--color: #ffffff;
+  --chat--heading--font-size: 1.8rem;
+  --chat--subtitle--font-size: 0.95rem;
+  --chat--subtitle--line-height: 1.5;
 
-.chat-window-wrapper .chat-window {
-  box-shadow: var(--chat--window--shadow) !important;
-  border-radius: var(--chat--window--border-radius) !important;
-  border: 1px solid rgba(148, 163, 184, 0.2) !important;
-  overflow: hidden !important; /* Köşelerin düzgün görünmesi için */
-  font-family: var(--chat--font-family) !important;
-}
+  /* Mesaj balonları */
+  --chat--message--font-size: 0.95rem;
+  --chat--message--padding: 0.9rem 1rem;
+  --chat--message-line-height: 1.5;
 
-/* ======================================================
-   2. LAUNCHER (AÇMA BUTONU)
-   ====================================================== */
-/* Markanın iki rengini birleştiren profesyonel bir geçiş */
-.chat-window-wrapper .chat-window-toggle {
-  background: linear-gradient(135deg, #004b7b 0%, #009a4a 100%) !important;
-  border: 2px solid #ffffff !important;
-  box-shadow: 0 8px 24px rgba(0, 75, 123, 0.4) !important;
-  transition: all 0.3s ease !important;
-}
+  --chat--message--bot--background: #ffffff;
+  --chat--message--bot--color: #263238;
 
-.chat-window-wrapper .chat-window-toggle:hover {
-  transform: translateY(-3px) scale(1.05) !important;
-  box-shadow: 0 12px 30px rgba(0, 154, 74, 0.5) !important;
-}
+  --chat--message--user--background: #00b894;
+  --chat--message--user--color: #ffffff;
 
-.chat-window-wrapper .chat-window-toggle svg {
-  fill: #ffffff !important;
-  width: 28px !important;
-  height: 28px !important;
-}
+  /* Yazma alanı */
+  --chat--input--font-size: 0.95rem;
+  --chat--input--placeholder--font-size: 0.95rem;
+  --chat--textarea--height: 56px;
+  --chat--input--padding: 0.85rem 1rem;
+  --chat--input--border-radius: 999px;
+  --chat--input--background: #ffffff;
 
-/* ======================================================
-   3. HEADER (BAŞLIK & LOGO)
-   ====================================================== */
+  /* Gönder butonu (ikon rengi / hover) */
+  --chat--input--send--button--background: transparent;
+  --chat--input--send--button--color: #00b894;
+  --chat--input--send--button--background-hover: #00b894;
+  --chat--input--send--button--color-hover: #ffffff;
 
-.chat-layout .chat-header {
-  /* Koyu Mavi Kurumsal Arka Plan */
-  background: linear-gradient(to right, #004b7b, #002e4d) !important;
-  color: #ffffff !important;
-  padding: 1.2rem 1rem 1.2rem 5.5rem !important; /* Logo için soldan boşluk */
-  position: relative !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-}
-
-/* LOGO YERLEŞİMİ */
-.chat-layout .chat-header::before {
-  content: "" !important;
-  position: absolute !important;
-  left: 1.2rem !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  width: 50px !important;
-  height: 50px !important;
-  /* İstenilen Logo Linki */
-  background-image: url("https://insize.com.tr/wp-content/uploads/2022/10/insize-logo.svg") !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-size: 80% !important;
-  background-color: #ffffff !important; /* Logoyu öne çıkarmak için beyaz zemin */
-  border-radius: 50% !important;
-  border: 2px solid rgba(255,255,255,0.2) !important;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
-}
-
-.chat-layout .chat-header h1 {
-  font-size: 1.2rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.5px !important;
-  margin-bottom: 2px !important;
-  text-transform: uppercase !important; /* Daha kurumsal duruş */
-}
-
-.chat-layout .chat-header p {
-  font-size: 0.85rem !important;
-  color: rgba(255, 255, 255, 0.85) !important;
-  font-weight: 400 !important;
-}
-
-/* ======================================================
-   4. MESAJ ALANI & BALONCUKLAR
-   ====================================================== */
-
-.chat-layout .chat-body {
-  background-color: var(--chat--color-bg-light) !important;
-  background-image: radial-gradient(#e2e8f0 1px, transparent 1px) !important;
-  background-size: 20px 20px !important; /* İnce teknik çizim hissi veren nokta dokusu */
-}
-
-/* BOT MESAJI */
-.chat-message.chat-message-from-bot {
-  background: #ffffff !important;
-  color: var(--chat--color-text-dark) !important;
-  border: 1px solid var(--chat--color-border) !important;
-  border-left: 4px solid var(--chat--color--primary) !important; /* Kurumsal vurgu çizgisi */
-  border-radius: 4px 12px 12px 12px !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
-  margin-bottom: 1.5rem !important; /* Etiketler için yer aç */
-}
-
-/* KULLANICI MESAJI */
-.chat-message.chat-message-from-user {
-  /* Deniz Metal Mavisi */
-  background: var(--chat--color--primary) !important; 
-  color: #ffffff !important;
-  border: none !important;
-  border-radius: 12px 12px 4px 12px !important;
-  box-shadow: 0 4px 12px rgba(0, 75, 123, 0.3) !important;
-  margin-bottom: 1.5rem !important;
-}
-
-/* KİMİN YAZDIĞI ETİKETLERİ (Siz / Asistan) */
-.chat-message.chat-message-from-bot::before {
-  content: "Deniz Metal & INSIZE Asistan" !important;
-  position: absolute !important;
-  top: -18px !important;
-  left: 0 !important;
-  font-size: 0.65rem !important;
-  font-weight: 700 !important;
-  color: var(--chat--color-text-medium) !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.5px !important;
-}
-
-.chat-message.chat-message-from-user::before {
-  content: "Siz" !important;
-  position: absolute !important;
-  top: -18px !important;
-  right: 0 !important;
-  font-size: 0.65rem !important;
-  font-weight: 700 !important;
-  color: var(--chat--color-text-medium) !important;
-  opacity: 0.8 !important;
-}
-
-/* Linkler ve Yazılar */
-.chat-message-markdown p {
-    line-height: 1.6 !important;
-}
-
-/* ======================================================
-   5. INPUT (YAZMA ALANI) & FOOTER
-   ====================================================== */
-
-.chat-layout .chat-footer {
-  background: #ffffff !important;
-  border-top: 1px solid var(--chat--color-border) !important;
-  padding: 1rem !important;
-}
-
-.chat-inputs textarea {
-  background: var(--chat--color-bg-light) !important;
-  border: 1px solid #cbd5e1 !important;
-  color: var(--chat--color-text-dark) !important;
-  border-radius: 24px !important;
-  padding-left: 16px !important;
-  font-size: 0.95rem !important;
-  transition: border-color 0.2s !important;
-}
-
-.chat-inputs textarea:focus {
-  border-color: var(--chat--color--primary) !important;
-  background: #ffffff !important;
-  box-shadow: 0 0 0 3px rgba(0, 75, 123, 0.1) !important;
-}
-
-/* GÖNDER BUTONU */
-.chat-input-send-button {
-  background: var(--chat--color--secondary) !important; /* INSIZE Yeşili */
-  color: #ffffff !important;
-  border-radius: 50% !important;
-  box-shadow: 0 4px 10px rgba(0, 154, 74, 0.3) !important;
-  transition: transform 0.2s, background 0.2s !important;
-}
-
-.chat-input-send-button:hover {
-  background: var(--chat--color--secondary-hover) !important;
-  transform: scale(1.05) !important;
-}
-
-/* "Powered by" yazısını gizle veya şıklaştır */
-.chat-powered-by {
-  font-size: 0.65rem !important;
-  color: #cbd5e1 !important;
-  margin-top: 4px !important;
+  /* Aç/Kapat yuvarlak buton */
+  --chat--toggle--size: 64px;
+  --chat--toggle--background: #00b894;
+  --chat--toggle--hover--background: #00a383;
+  --chat--toggle--active--background: #008c70;
 }
