@@ -1,0 +1,219 @@
+/* ================================================
+   Deniz Metal & INSIZE – Chat Tema CSS’i
+   ================================================ */
+
+:root {
+  --chat--color--primary: #004b7b;
+  --chat--color--primary-shade-50: #003a63;
+  --chat--color--primary--shade-100: #002948;
+  --chat--color--secondary: #00b894;
+  --chat--color-secondary-shade-50: #009172;
+
+  --chat--color-white: #ffffff;
+  --chat--color-light: #f3f4f6;
+  --chat--color-light-shade-50: #e5e7eb;
+  --chat--color-light-shade-100: #d1d5db;
+  --chat--color-medium: #9ca3af;
+  --chat--color-dark: #020617;
+  --chat--color-typing: #4b5563;
+
+  --chat--font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --chat--window--width: 420px;
+  --chat--window--height: 580px;
+  --chat--window--border-radius: 20px;
+  --chat--window--border: 1px solid rgba(15, 23, 42, 0.2);
+
+  --chat--border-radius: 16px;
+  --chat--message--font-size: 0.9rem;
+  --chat--message--padding: 0.75rem 0.9rem;
+  --chat--message--margin-bottom: 0.4rem;
+  --chat--message-line-height: 1.5;
+
+  --chat--message--bot--background: #ffffff;
+  --chat--message--bot--color: #111827;
+  --chat--message--bot--border: 1px solid rgba(148, 163, 184, 0.4);
+
+  --chat--message--user--background: linear-gradient(
+    135deg,
+    #004b7b,
+    #00b894
+  );
+  --chat--message--user--color: #f9fafb;
+  --chat--message--user--border: none;
+
+  --chat--input--background: #ffffff;
+  --chat--input--text-color: #111827;
+  --chat--input--border-radius: 999px;
+  --chat--input--border-active: 1px solid #004b7b;
+
+  --chat--button--background: #004b7b;
+  --chat--button--color: #f9fafb;
+  --chat--button--hover--background: #003a63;
+
+  --chat--input--send--button--background: #004b7b;
+  --chat--input--send--button--color: #f9fafb;
+  --chat--input--send--button--background-hover: #003a63;
+  --chat--input--send--button--color-hover: #e5e7eb;
+
+  --chat--header--background: radial-gradient(
+    circle at top left,
+    #00b894 0,
+    #004b7b 45%,
+    #020617 100%
+  );
+  --chat--header--color: #f9fafb;
+  --chat--header--padding: 0.9rem 1rem;
+  --chat--heading--font-size: 1.1rem;
+  --chat--subtitle--font-size: 0.78rem;
+  --chat--subtitle--line-height: 1.5;
+
+  --chat--body--background: radial-gradient(
+    circle at top,
+    #ffffff 0,
+    #f3f4f6 40%,
+    #e5e7eb 100%
+  );
+  --chat--footer--background: rgba(248, 250, 252, 0.9);
+  --chat--footer--color: #111827;
+}
+
+/* Pencere & launcher */
+
+.chat-window-wrapper .chat-window {
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(10px);
+}
+
+.chat-window-wrapper .chat-window-toggle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #004b7b, #00b894);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.7);
+}
+
+.chat-window-wrapper .chat-window-toggle svg {
+  width: 30px;
+  height: 30px;
+}
+
+.chat-window-wrapper .chat-window-toggle:hover,
+.chat-window-wrapper .chat-window-toggle:focus {
+  transform: scale(1.05);
+}
+
+.chat-window-wrapper .chat-window-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Header */
+
+.chat-layout .chat-header {
+  background: var(--chat--header--background);
+  color: var(--chat--header--color);
+  border: 0;
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.25);
+}
+
+.chat-layout .chat-header h1 {
+  font-size: var(--chat--heading--font-size);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.chat-layout .chat-header p {
+  font-size: var(--chat--subtitle--font-size);
+  opacity: 0.9;
+}
+
+/* Mesaj alanı */
+
+.chat-layout .chat-body {
+  background: var(--chat--body--background);
+}
+
+.chat-messages-list {
+  padding: 0.9rem 0.9rem 0.8rem;
+}
+
+.chat-message.chat-message-from-bot {
+  background: var(--chat--message--bot--background);
+  color: var(--chat--message--bot--color);
+  border: var(--chat--message--bot--border);
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 8px 18px rgba(148, 163, 184, 0.35);
+}
+
+.chat-message.chat-message-from-user {
+  background: var(--chat--message--user--background);
+  color: var(--chat--message--user--color);
+  border: var(--chat--message--user--border);
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.6);
+}
+
+.chat-message > .chat-message-markdown {
+  font-size: 0.9rem;
+}
+
+/* Input & buton */
+
+.chat-layout .chat-footer {
+  background: var(--chat--footer--background);
+  border-top: 1px solid rgba(148, 163, 184, 0.5);
+}
+
+.chat-inputs textarea {
+  border-radius: 999px !important;
+  border: 1px solid rgba(148, 163, 184, 0.7) !important;
+  padding-inline: 14px !important;
+  font-size: 0.86rem !important;
+  background: var(--chat--input--background) !important;
+  color: var(--chat--input--text-color) !important;
+}
+
+.chat-inputs textarea:focus {
+  border-color: #004b7b !important;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.35);
+}
+
+.chat-input-send-button {
+  background: var(--chat--input--send--button--background) !important;
+  color: var(--chat--input--send--button--color) !important;
+  border-radius: 999px !important;
+  width: var(--chat--textarea--height);
+  height: var(--chat--textarea--height);
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.65) !important;
+}
+
+.chat-input-send-button:hover,
+.chat-input-send-button:focus {
+  background: var(--chat--input--send--button--background-hover) !important;
+  color: var(--chat--input--send--button--color-hover) !important;
+}
+
+.chat-input-file-button {
+  background: transparent !important;
+  color: #6b7280 !important;
+}
+
+/* Yazıyor baloncukları */
+.chat-message-typing .chat-message-typing-circle {
+  background-color: var(--chat--color-typing);
+}
+
+/* Powered by yazısı */
+.chat-powered-by {
+  font-size: 0.7rem;
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .chat-window-wrapper .chat-window {
+    width: calc(100vw - 1.5rem);
+    height: 70vh;
+  }
+}
