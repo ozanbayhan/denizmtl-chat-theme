@@ -221,114 +221,108 @@
    LAUNCHER BUTTON (CHAT AÇMA BUTONU)
    ====================================================== */
 .chat-window-wrapper .chat-window-toggle {
-  background: linear-gradient(135deg, #009a4a 0%, #00c76a 50%, #007844 100%);
-  border: 2px solid #ffffff;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: linear-gradient(135deg, #009a4a 0%, #00c76a 50%, #007844 100%) !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
 .chat-window-wrapper .chat-window-toggle:hover {
-  transform: translateY(-2px) scale(1.05);
+  transform: translateY(-2px) scale(1.05) !important;
 }
 
 .chat-window-wrapper .chat-window-toggle svg {
-  width: 28px;
-  height: 28px;
+  width: 28px !important;
+  height: 28px !important;
 }
-
 
 /* ======================================================
    HEADER – INSIZE LOGO + YERLEŞİM
    ====================================================== */
 .chat-layout .chat-header {
-  position: relative;
-  padding-left: 5rem;
+  position: relative !important;
+  padding-left: 5rem !important;
 }
 
 .chat-layout .chat-header::before {
-  content: "";
-  position: absolute;
-  left: 1.4rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  background-image: url("https://insize.com.tr/wp-content/uploads/2022/10/insize-logo.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-color: #ffffff;
-  border-radius: 50%;
-  padding: 6px;
+  content: "" !important;
+  position: absolute !important;
+  left: 1.4rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 44px !important;
+  height: 44px !important;
+  background-image: url("https://insize.com.tr/wp-content/uploads/2022/10/insize-logo.svg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  background-color: #ffffff !important;
+  border-radius: 50% !important;
+  padding: 6px !important;
 }
 
 .chat-layout .chat-header h1 {
-  font-size: 1.35rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.03em !important;
 }
 
 .chat-layout .chat-header p {
-  font-size: 0.9rem;
-  opacity: 0.9;
+  font-size: 0.9rem !important;
+  opacity: 0.9 !important;
 }
-
 
 /* ======================================================
    USER INPUT (YAZI YAZMA ALANI)
    ====================================================== */
 .chat-inputs textarea {
-  font-size: 16.5px;
-  line-height: 1.5;
+  font-size: 16.5px !important;
+  line-height: 1.5 !important;
 }
 
 .chat-inputs textarea::placeholder {
-  font-size: 15px;
-  opacity: 0.6;
+  font-size: 15px !important;
+  opacity: 0.6 !important;
 }
-
 
 /* ======================================================
    SEND BUTTON (GÖNDER BUTONU)
    ====================================================== */
 .chat-input-send-button {
-  border-radius: 999px;
-  background: linear-gradient(135deg, #009a4a 0%, #00c76a 50%, #007844 100%);
+  border-radius: 999px !important;
+  background: linear-gradient(135deg, #009a4a 0%, #00c76a 50%, #007844 100%) !important;
   color: #ffffff !important;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.22) !important;
 }
 
 .chat-input-send-button:hover {
-  filter: brightness(1.08);
+  filter: brightness(1.08) !important;
 }
-
 
 /* ======================================================
    MESSAGE LABELS (MESAJ SAHİBİ ETİKETLERİ)
    ====================================================== */
 .chat-message {
-  position: relative;
+  position: relative !important;
 }
 
 .chat-message.chat-message-from-bot::before {
-  content: "INSIZE AI Asistan";
-  display: block;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #4b4f63;
-  margin-bottom: 0.2rem;
-  opacity: 0.85;
+  content: "INSIZE AI Asistan" !important;
+  display: block !important;
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+  color: #4b4f63 !important;
+  margin-bottom: 0.2rem !important;
+  opacity: 0.85 !important;
 }
 
 .chat-message.chat-message-from-user::before {
-  content: "Siz";
-  display: block;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #4b4f63;
-  margin-bottom: 0.2rem;
-  text-align: right;
-  opacity: 0.85;
+  content: "Siz" !important;
+  display: block !important;
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+  color: #4b4f63 !important;
+  margin-bottom: 0.2rem !important;
+  text-align: right !important;
+  opacity: 0.85 !important;
 }
-
-
